@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    /* min-height: 100vh;
+    width: 100%; */
+    background-color: #f2f2f2;
+}
+
+.shopping{
+    padding: 5px;
+}
+
+
+
+.cards .card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cards .card .content .img{
+    height: 330px;
+    width: 230px;
+}
+
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card .content .details .name{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card .content .details .price{
+    font-size: 14px;
+    font-weight: 400;
+}
+.card .content .shop-btn button{
+    padding: 5px;
+    background: #000;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 14rem;
+}
+
+.card .content .shop-btn button:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    
+}
+
+.shopping h1{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+
+.shopping .hr{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+
+.cards .card{
+    background: #fff;
+    /* width: calc(100% / 5 - 30px); */
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.main-card .cards{
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-card .cards .card:hover{
+    transform: translateY(-15px);
+}
+
+.shoping-section{
+    max-width: 1450px;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 80px 0;
+    margin-left: 3%;
+}
+
+.shoping-section .main-card{
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 1s ease;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.btn label{
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    padding-top: 10px;
+    margin: 0 4px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.btn label.active{
+    width: 35px;
+}
+
+#one:checked ~ .btn label.one{
+    width: 35px;
+}
+
+#two:checked ~ .btn label.two{
+    width: 35px;
+}
+
+#two:checked ~ .btn label.one{
+    width: 15px;
+}
+
+#one:checked ~ .btn label.two{
+    width: 15px;
+}
+
+#two:checked ~ .main-card{
+    margin-left: -100%;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .main-card .cards .card{
+        width: calc(100% / 2 - 10px);
+        margin: 20px 0 10px 0;
+    }
+    .shoping-section{
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 600px){
+    .main-card .cards .card{
+        width: 100%;
+        margin: 20px 0 10px 0;
+    }
+    .shoping-section{
+        margin-left: 0;
+    }
+}
+
+.pop .img-sec .img img{
+    object-fit: cover;
+    height: 350px;
+    width: 200px;
+}
+
+.pop hr{
+    margin-bottom: 20px;
+}
+.pop .img-sec{
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pop .img{
+    transition: all 0.5s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px;
+}
+
+.pop .img:hover{
+    transform: translateY(10px);
+    border: 1px solid black;
+}
+
+.preview{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-2{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.preview .pop{
+    display: none;
+    padding: 1.1rem;
+    text-align: center;
+    background: #f2f2f2;
+    position: relative;
+    width: 30rem;
+    height: 31rem;
+    border-radius: 10px;
+}
+
+.preview-2 .pop-lg{
+    display: none;
+    padding: 1.1rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    width: 90%;
+    height: 43rem;
+    border-radius: 10px;
+}
+
+.preview-2 .pop-lg.active{
+    display: inline-block;
+}
+
+
+.preview .pop.active{
+    display: inline-block;
+}
+
+.preview .pop .fa-times{
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.preview .pop .fa-times:hover{
+    transform: rotate(90deg);
+    color: brown;
+}
+
+.preview-2 .pop-lg .fa-times{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.preview-2 .pop-lg .fa-times:hover{
+    transform: rotate(90deg);
+    color: brown;
+}
+
+.preview-2 .pop-lg .contents{
+    display: flex;
+    float: left;
+    gap: 10px;
+}
+
+.preview-2 .pop-lg .img-box{
+    width: 29rem;
+    height: 37rem;
+    background-color: #000;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: all .4s ease-in-out;
+}
+
+
+.preview-2 .pop-lg .img-box:hover{
+    box-shadow: rgba(18, 9, 200, 0.65) 0px 5px 15px;
+}
+
+
+.preview-2 .pop-lg .img-box img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.preview-2 .pop-lg .form-box{
+    width: 70%;
+    background-color: #fff;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all .4s ease-in-out;
+}
+.preview-2 .pop-lg .form-box:hover{
+    box-shadow: rgba(0, 255, 0, 0.95) 0px 5px 15px;
+    
+}
+.preview-2 .pop-lg .form-box button{
+    padding: 5px;
+    background: #000;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-left: 250px;
+    margin-top: 15px;
+    width: 14rem;
+}
+
+.preview-2 .pop-lg .form-box button:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.preview-2 .pop-lg .form-box form{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.preview-2 .pop-lg .form-box .input{
+    width: 20rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+.preview-2 .pop-lg .form-box .address{
+    width: 41.8rem;
+    margin-top: 5px;
+}
